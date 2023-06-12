@@ -10,9 +10,9 @@ worksheet = spreadsheet.worksheet('Sheet1')
 
 def main():
     # Add a text input for the data to update
-     st.title("Data Entry Form")
+    st.title("Data Entry Form")
 
-    # Add a button to trigger the update
+   
     # Add input fields for name, age, address, phone, subject, and fees
     name = st.text_input("Name")
     age = st.number_input("Age")
