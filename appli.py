@@ -23,12 +23,13 @@ def main():
 
     # Add a button to trigger the update
     if st.button("Update Sheet"):
+
+        last_row = len(worksheet.get_all_values()) + 1
         # Create a list with the values to update in the worksheet
         data = [name, age, address, phone, subject, fees]
 
         # Update the worksheet with the new data
-        cell_range = "A2:F2"  # Assuming the data starts from the first row
-        worksheet.update(cell_range, [data])
+        worksheet.append_row(data, value_input_option="USER_ENTERED", table_range=f"A{last_row}:F{last_row}")
         st.success("Sheet updated successfully!")
 
 if __name__ == '__main__':
